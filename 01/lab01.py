@@ -1,9 +1,14 @@
 # #!/usr/bin/env python3
 
 """
-Kód ke cvičení #1 z NPRG030.
-Kód nemá fungovat jako celek, jednotlivé části byly postupně vysvětleny na cvičení.
+Kód ke cvičení #2 z NPRG030.
+Kód nemá fungovat jako celek a nemusí být kompletní.
+Jednotlivé části kódu byly postupně vysvětleny na cvičení.
 """
+
+# ============
+# PRINT
+# ============
 
 # funkce print() vytiskne svoje argumenty na standardní výstup
 print("Hello world")
@@ -13,6 +18,10 @@ print()
 
 # ...ve skutečnosti vytiskne nový řádek na konci vždy, dokud neřekneme jinak
 print("Hello world", end="")
+
+# ============
+# INPUT A TYPY
+# ============
 
 # vstup získáme pomocí funkce input()
 input()
@@ -25,6 +34,15 @@ i = int(input("Zadejte číslo: "))
 
 # ...nebo na float - číslo s desetinnou částí
 f = float(input("Zadejte číslo: "))
+
+# typ proměnných můžeme zjistit pomocí funkce type()
+print(type(s))
+print(type(i))
+print(type(f))
+
+# ============
+# ARITMETIKA
+# ============
 
 # čísla můžeme sčítat, odčítat...
 j = 2 + 5
@@ -51,6 +69,10 @@ print(l != m) # nerovná se
 # ...a to i zřetězeně
 print(n < l <= m)
 
+# ============
+# PRECISION
+# ============
+
 # pozor, float má omezenou přesnost
 f = 1/6
 print(f)
@@ -60,6 +82,10 @@ sum = 0
 while sum != 1:
     sum += 1/6
     # toto nikdy nedoběhne
+
+# ============
+# WHILE
+# ============
 
 # while je tzv. cyklus (loop)
 # while cyklus opakuje vnitřní blok kódu, dokud je PODMÍNKA vyhodnocena jako pravdivá (True)
@@ -71,7 +97,11 @@ while i < 10:
     i += 1
     print(i)
 
-# hodnotu proměnných můžeme kontrolovat pomocí podmínky if (/ elif / else)
+# ============
+# PODMÍNKY
+# ============
+
+# tok kódu můžeme řídit pomocí podmínky if (/ elif / else)
 age = int(input("Zadejte věk: "))
 
 if 0 <= age < 18:
