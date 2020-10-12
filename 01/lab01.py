@@ -1,7 +1,7 @@
 # #!/usr/bin/env python3
 
 """
-Kód ke cvičení #2 z NPRG030.
+Kód ke cvičení #1 z NPRG030.
 Kód nemá fungovat jako celek a nemusí být kompletní.
 Jednotlivé části kódu byly postupně vysvětleny na cvičení.
 """
