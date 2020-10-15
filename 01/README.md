@@ -19,24 +19,24 @@
 *   case study na [receptu](https://recepty.vareni.cz/bramboraky/)
 *   **asymptotická složitost** - čas, paměť - nezajímá nás konkrétní implementace
 *  O-notace - řešíme nejhorší scénář
-    * O(1): vstup: čísla od 1 do n; výstup: jejich součet; vzorec n ( n + 1 ) / 2
-    * O(log(n)): vstup: slovník seřazený podle abecedy; výstup: definice hledaného slova; binární vyhledávání   
-    * O(n): vstup: text; výstup: text bez diakritiky  
-    * O(n): vstup: čísla od 1 do n; výstup: jejich součet; naivní sčítání  
-    * O(n^2): vstup: seznam lidí s parametry; výstup: dvojice lidí s kompatibilními parametry  
-    * O(2^n): vstup: počet znaků hesla; výstup: uhádnuté heslo (brute-force algoritmus)
-    * O(n!): vstup: seznam čísel; výstup: všechny permutace seznamu
+    * `O(1)`: vstup: čísla od 1 do n; výstup: jejich součet; vzorec `n ( n + 1 ) / 2`
+    * `O(log(n))`: vstup: slovník seřazený podle abecedy; výstup: definice hledaného slova; binární vyhledávání   
+    * `O(n)`: vstup: text; výstup: text bez diakritiky  
+    * `O(n)`: vstup: čísla od 1 do n; výstup: jejich součet; naivní sčítání  
+    * `O(n^2)`: vstup: seznam lidí s parametry; výstup: dvojice lidí s kompatibilními parametry  
+    * `O(2^n)`: vstup: počet znaků hesla; výstup: uhádnuté heslo (brute-force algoritmus)
+    * `O(n!)`: vstup: seznam čísel; výstup: všechny permutace seznamu
         
-##### Programování
+## Programování
 *   povídání o Pythonu - název, rozdíl verze 2 vs. verze 3
-*   hrátky s funkcí print(), konec řádku, dokumentace vs. hledání na webu
-*   vstup: input(), přetypování int()
-*   typy proměnných v Pythonu: funkce type()
-*   reprezentace čísel: int (neomezená přesnost) vs. float (omezená přesnost)
+*   hrátky s funkcí `print()`, konec řádku, dokumentace vs. hledání na webu
+*   vstup: input(), přetypování `int()`
+*   typy proměnných v Pythonu: funkce `type()`
+*   reprezentace čísel: `int` (neomezená přesnost) vs. `float` (omezená přesnost)
     *   co se taky může stát, když si nedáváte pozor: [Patriot](http://www-users.math.umn.edu/~arnold//disasters/patriot.html), [Ariane](https://around.com/ariane.html)
-*   cyklus while
+*   cyklus `while`
 *   debugging - sledování proměnných
-*   podmínka: if, elif, else
+*   podmínka: `if`, `elif`, `else`
 *   porovnávání čísel, zřetězení porovnávacích operátorů
 *   srovnání rychlosti Python vs. C
 *   proč má smysl programovat v Pythonu
