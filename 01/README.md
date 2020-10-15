@@ -30,7 +30,7 @@
 ## Programování
 *   povídání o Pythonu - název, rozdíl verze 2 vs. verze 3
 *   hrátky s funkcí `print()`, konec řádku, dokumentace vs. hledání na webu
-*   vstup: input(), přetypování `int()`
+*   vstup: `input()`, přetypování `int()`
 *   typy proměnných v Pythonu: funkce `type()`
 *   reprezentace čísel: `int` (neomezená přesnost) vs. `float` (omezená přesnost)
     *   co se taky může stát, když si nedáváte pozor: [Patriot](http://www-users.math.umn.edu/~arnold//disasters/patriot.html), [Ariane](https://around.com/ariane.html)
