@@ -1,16 +1,6 @@
 # Cvičení č. 3 – 16.10.2020
 
 ## Algoritmizace
-- [prezentace z přednášky](2Numericke.pdf)
-
-### Úlohy na asymptotickou složitost
-*viz slide 9 v přednášce*
-
-Dokažte nebo vyvraťte:
-1. Pokud `f(n)=O(g(n))`, pak `g(n)=O(f(n))`
-2. Pokud `f(n)=O(g(n))`, pak `2^f(n)=O(2^g(n))`
-3. Pokud `f(n)=O(g(n))`, pak `g(n)=Ω(f(n))`
-4. `f(n)=O(f(n)^2)`
 
 ### Úlohy na cykly
 
@@ -23,11 +13,11 @@ for i in range(n):
 ```
 2) Kolikrát se provede vnitřní cyklus v závislosti na `m` a `n`? Jaká bude jeho asymptotická časová složitost vyjádřená pomocí `m` a `n`?
 ```python
-l=0
 for i in range(n):
-    for j in range(n):
-        for k in range(1,m): 
-            l+=1
+    for j in range(n*n):
+        k = 0
+        while k*k < m:
+            k += 1
 ```
 3) Kolikrát se provede cyklus v závislosti na `n`? Jaká bude jeho asymptotická časová složitost v závislosti na hodnotách `n` (uvažujte *best-case* a *worst-case*)?
 ```python
@@ -44,3 +34,12 @@ for i in range(n,1,-1):
     while j > 0:
         j //= 2
 ```
+
+### Úlohy na asymptotickou složitost
+*viz slide 9 v [prezentaci z přednášky](2Numericke.pdf)*
+
+Dokažte nebo vyvraťte:
+1. Pokud `f(n)=O(g(n))`, pak `g(n)=O(f(n))`
+2. Pokud `f(n)=O(g(n))`, pak `2^f(n)=O(2^g(n))`
+3. Pokud `f(n)=O(g(n))`, pak `g(n)=Ω(f(n))`
+4. `f(n)=O(f(n)^2)`
