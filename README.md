@@ -84,7 +84,7 @@ _1) Zadání_
 *   zadání Vám buď schválím rovnou, nebo se domluvíme na změnách
 *   inspiraci můžete hledat zde, ale nebojte se být i originální:
     *   http://mj.ucw.cz/vyuka/zap/
-    *   https://ksvi.mff.cuni.cz/~holan/zap\_zs\_2019-20\_python.txt
+    *   https://ksvi.mff.cuni.cz/~holan/zap_zs_2019-20_python.txt
     *   https://www.ms.mff.cuni.cz/~dvoram30/zapoctak.html
     *   https://www.ms.mff.cuni.cz/~forstova/pgmZ/Zapoctaky.html
 
