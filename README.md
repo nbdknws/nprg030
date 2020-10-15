@@ -10,7 +10,7 @@
 *  :earth_africa: **Původní web:** [https://ufal.mff.cuni.cz/courses/nprg030](https://ufal.mff.cuni.cz/courses/nprg030)
 
 * * *
-**Informace o cvičení najdete nově zde. V každé složce je soubor README.md s obsahem cvičení a soubor(y) s kódy ze cvičení. Na původním webu už by se nemělo nic objevovat. Omlouvám se za kliky navíc** :innocent:
+**Informace o cvičení najdete nově zde. V každé složce je soubor README.md s obsahem cvičení a soubor(y) s kódy ze cvičení. Na původním webu už by se nemělo nic objevovat. Slibuji, že větší změny už tento semestr nenastanou, a omlouvám se za kliky navíc** :innocent:
 
 Cvičení z Algoritmizace a Programování 1 na sebe budou navazovat a budou vedena stejným cvičícím.
 
