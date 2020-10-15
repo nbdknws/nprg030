@@ -10,7 +10,12 @@
     *   úlohy na Programování vždy v pátek, na Algoritmizaci několikrát za semestr 
     *   registrace: vybrat _Create account_ a přihlásit se pod školním účtem
     *   pak je možné i vytvořit lokální účet - instrukce [tady](https://github.com/ReCodEx/wiki/wiki/User-documentation), případně se dál přihlašovat pod školním účtem
-*   **možnosti doplnění cvičení**: 1. tento web 2. kódy ze cvičení 3. nahrané cvičení (Tomáš Holan?) 4. e-mail 5. konzultace
+*   **možnosti doplnění cvičení**: 
+    1. tento web 
+    2. kódy ze cvičení
+    3. nahrané cvičení (Tomáš Holan?) 
+    4. e-mail
+    5. konzultace
 
 ## Algoritmizace
 *   brainstorming - co je to algoritmus, vlastnosti algoritmu
