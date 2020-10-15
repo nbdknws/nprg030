@@ -7,7 +7,7 @@
 *  :speaking_head: **Discord (neoficiální, zvací odkaz v SISu / e-mailu):** _#alg-prg1-cv-kasner_
 *  :house: **Domácí úlohy:** [https://recodex.mff.cuni.cz](http://recodex.mff.cuni.cz)
 *  :couple: **Konzultace:** [rozpis](https://docs.google.com/spreadsheets/d/1yj9CVfraWJXa2gJOmASbjmgY1lU95sujHm9BMjuLyj4/edit?usp=sharing) (→ zapište se předem)
-*  :earth_africa: **Původní web:** [https://ufal.mff.cuni.cz/courses/nprg030](https://ufal.mff.cuni.cz/courses/nprg030)
+*  :earth_africa: **Původní web:** [https://ufal.mff.cuni.cz/zdenek-kasner/nprg030](https://ufal.mff.cuni.cz/zdenek-kasner/nprg030)
 
 * * *
 **Informace o cvičení najdete nově zde. V každé složce je soubor README.md s obsahem cvičení a soubor(y) s kódy ze cvičení. Na původním webu už by se nemělo nic objevovat. Slibuji, že větší změny už tento semestr nenastanou, a omlouvám se za kliky navíc** :innocent:
