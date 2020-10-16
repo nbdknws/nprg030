@@ -2,11 +2,12 @@
 
 ## Informace
 - info o cvičení přesunuto na Github, na webu zůstal odkaz
-- zápočtové programy - promýšlejte, do 1.12. si se mnou domluvte téma, info na webu
-- pokud můžete, používejte Git pro verzování kódu (doufám, že během semestru stihneme tutorial, ale základ se dá naučit jednoduše)
+- zápočtové programy - promýšlejte, do 1.12. si se mnou domluvte téma (více v [požadavcích](../README.md))
+- pokud můžete, používejte Git pro verzování kódu
+  - doufám, že během semestru stihneme tutorial na cvičení, ale základ se dá naučit jednoduše z tutorialů na webu
 
 ## Domácí úlohy
-- hinty: kontrolovat formát vstupu, kontrolovat výstupy pro krajní hodnoty
+- hinty: kontrolovat formát vstupu, kontrolovat výstupy programu pro mezní hodnoty
 - naopak validitu vstupních hodnot není potřeba kontrolovat, dokud to není explicitně řečeno v zadání
 
 ## Algoritmizace
@@ -44,10 +45,10 @@ for i in range(n,1,-1):
 ```
 
 #### [Spoiler alert] Řešení
-1) přesný vzorec: `n * (n+1) / 2`, asymptoticky n^2
-2) O(n^3 * sqrt(m))
-3) best-case Ω(1) - čísla nedělitelná třemi, worst-case O(log(n)) - mocniny trojky
-4) O(n log(n)) 
+1) přesný vzorec: `n * (n+1) / 2`, asymptoticky `n^2`
+2) `O(n^3 * sqrt(m))`
+3) best-case `Ω(1)` - čísla nedělitelná třemi, worst-case `O(log(n))` - mocniny trojky
+4) `O(n log(n))` 
 
 ### Úlohy na asymptotickou složitost
 *viz slide 9 v [prezentaci z přednášky](2Numericke.pdf)*
