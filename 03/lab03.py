@@ -1,155 +1,172 @@
 # #!/usr/bin/env python3
 
 """
-Kód ke cvičení #2 z NPRG030.
+Kód ke cvičení #3 z NPRG030.
 Kód nemá fungovat jako celek a nemusí být kompletní.
 Jednotlivé části kódu byly postupně vysvětleny na cvičení.
 """
-
 # ============
-# FORMÁTOVÁNÍ
+# unicode
 # ============
+# znak můžeme nejen převádět na Unicode hodnotu...
+ch = "a"
+print(ord(ch))
 
-city = "Praha"
-temp = 15
-speed = 8.6
+# ...ale i naopak
+code = 97
+print(chr(code))
 
-# funkce print() může vytisknout více argumentů
-print("Ve městě", city, "je", temp, "stupňů a vítr fouká rychlostí", speed, "km/h")
+# ===============
+# logické operace
+# ===============
+# nad výrazy můžeme provádět logické operace
+a = 5
+b = 7
 
-# oddělovač můžeme změnit
-print("Ve městě", city, "je", temp, "stupňů a vítr fouká rychlostí", speed, "km/h", sep="|")
+# and: oba výrazy platí zároveň
+if a < 5 and b < 5:
+    print("Platí oba")
+# or: platí alespoň jeden výraz (nebo oba zároveň)
+elif a < 5 or b < 5:
+    print("Platí alespoň jeden")
 
-# většinou je ale lepší string formátovat, a to buď pomocí metody format()
-s = "Ve městě {} je {} stupňů a vítr fouká rychlostí {} km/h"
-print(s.format(city, temp, speed))
+# s logickými hodnotami můžeme přímo pracovat
+t = True
+f = False
 
-# nebo přímo přes f-stringy
-s = f"Ve městě {city} je {temp} stupňů a vítr fouká rychlostí {speed} km/h"
-print(s)
+print(t and f)
+print(t or f)
 
-# v Pythonu 2 se formátovalo jinak, ale tento způsob už by se neměl používat
-s = "Ve městě %s je %d stupňů a vítr fouká rychlostí %f km/h" % (city, temp, speed)
-print(s)
+# ===============
+# None
+# ===============
+# speciálním typem objektu je None...
+obj = None
 
-# s metodou .format() i s f-stringy můžeme používat různé formátovací značky a text (nejen) zarovnávat
-print(f"{speed:.2f}")
-print(f"{speed:.5f}")
-print(f"{speed:06.1f}")
-print(f"{temp:5d}")
+# ...třídy NoneType
+print(type(obj))
 
-# od Pythonu 3.8 můžeme jednoduše vypisovat název proměnné společně s její hodnotou
-print(f"{speed=}")
+# pozor, None není 0, False ani prázdný string...
+print(None == 0)
+print(None == False)
+print(None == "")
 
-# ============
-# DĚLENÍ
-# ============
+# ...ale v podmínce se vyhodnotí na False
+if obj:
+    print("Funguje to")
+else:
+    print("Nefunguje to")
 
-# čísla můžeme dělit nejen ve floatech
-a = 5 / 2
+# jestli je objekt None kontrolujeme správně explicitně přes is (not) None
+if obj is None:                     # (aka náš `obj` ukazuje na stejné místo v paměti, jako None)
+    print("Náš objekt je None")
+elif:
+    print("V obj máme hodnotu")
 
-# ...a následně zaokrouhovat
-b = round(a)
+# většinou se používá na označení prázdné návratové hodnoty, neinicializované proměnné apod.
+l = [1, 2, 3, 4, 5]
+print(l.append(6))      # prázdná návratová hodnota
+var = None              # var existuje, ale neukazuje na žádný objekt (technicky ukazuje, ale pouze na None)
 
-# ale i celočíselně
-c = 5 // 2
+# None je schovaný např. ve slicingu listu:
+l2 = l[1:]
 
-# a také zjišťovat zbytek
-d = 5 % 2
+# ...je to samé jako
+l2 = l[1:None]
 
-# ============
-# STRINGY
-# ============
+# což můžeme použít např. takto
+start = 1
+end = None
+l2 = l[start:end]
 
-# string je řetězec znaků
-s = "abcde"
+# ===============
+# konstanty
+# ===============
+# konstanty nepíšeme přímo do kódu:
+if a == 42:
+    print("Máme odpověď")
 
-# Python 3 používá Unicode, proto můžeme používat téměř libovolné znaky
-s1 = "ň"
-s2 = "😄"
-s3 = "て"
+# ...ale snažíme se je vhodně pojmenovat ;)
+answer = 42
+if a == answer:
+    print("Máme odpověď")
 
-# porovnávání stringů porovnává postupně Unicode hodnoty znaků
-print(s1 < s2)
+# ===============
+# 2D pole
+# ===============
+# listy do sebe můžeme zanořovat, čímž vytvoříme 2D (3D, ...) pole
+l = [[1,2], [3,4], [5,6]]
 
-# ...které můžeme zjistit pomocí vestavěné funkce ord()
-print(ord(s1))
-print(ord(s2))
-print(ord(s3))
+# indexujeme postupně - každý index z listu vrátí jeho prvek (tzn. na vnějším listu sublist, na vnitřním listu přímo hodnotu)
+sublist = l[1]
+elem = l[1][0]
 
-# ============
-# LISTY
-# ============
+# procházet 2D list můžeme např. pomocí dvou for cyklů
+for sublist in l:
+    for elem in sublist:
+        print(elem, end=" ")
+    print()
 
-# listy můžeme vytvořit dvěma způsoby
-l1 = []
-l2 = list()
+# ===================
+# list comprehensions
+# ===================
+# často používaný způsob, jak vytvořit list a další
+# iterovatelné objekty z jiných iterovatelných objektů
+l1 = [1, 2, 3, 4, 5]
+l2 = [x for x in l1]                # vytvoří kopii listu
+l3 = [x+1 for x in l1]              # vytvoří list s prvky o jedničku vyšší
+l4 = [x*x for x in l1]              # vytvoří list druhých mocnin
+l5 = [x for x in l1 if x < 3]       # vyfiltruje prvky, které jsou menší než 3
 
-# přes syntaxi [] můžeme list rovnou i nainicializovat
-l1 = [0, 1, 2, 3, 4, 5]
+# ===================
+# tuples
+# ===================
+# tuple je seznam prvků podobně jako list
+t = (1, 2, 3)
 
-# přes list() můžeme vytvořit list z jiného iterovatelného objektu
-r = range(6)
-l2 = list(r)
+# ale narozdíl od listu je immutable - nemůžeme ji po vytvoření nijak změnit
+t.append(4)         # vyvolá výjimku
 
-# list můžeme vytvořit i ze stringu pomocí funkce split(), separátor je defaultně mezera (lze změnit)
-s = "Hello world"
-l3 = s.split()
-print(l3)
+# můžeme z ní ale list udělat
+l = list(t)
 
-# pokud chceme dělit po znacích, musíme opět použít list()
-l4 = list(s)
-print(l4)
+# tuples se v Pythonu vyskutují často na nečekaných místech
+# vrací nám je např. funkce enumerate()
+for t in enumerate(["a", "b", "c"]):
+    print(t)
+    print(type(t))
 
-# znaky můžeme opět spojit
-# POZOR, .join() je metoda stringu, přes který spojujeme, a ne listu
-print(",".join(l4))
+# a můžeme je "zneužít" na výměnu hodnot prvků
+a = 1
+b = 2
 
-# s listem jde dělat řada věcí
-l1.append(6)         # přidávat prvky
-l1.reverse()         # obracet pořadí prvků
-print(l1.count(3))   # počítat výskyt konkrétních prvků
-l1.clear()           # mazat všechny prvky
+b, a = a, b     # provede swap(a,b)
 
-# ...a řadu dalších, které objevíme pomocí funkce dir()...
-print(dir(l1))
 
-# ...nebo v dokumentaci, případně na Stack Overflow ;)
+# ===================
+# funkce
+# ===================
+# základ pro modularizaci a znovupoužitelnost kódu
 
-# list můžeme také indexovat...
-print(l2[0])        # první prvek, v Pythonu indexujeme od nuly
-print(l2[4])        # pátý prvek
-print(l2[-1])       # poslední prvek - můžeme využívat záporné indexy pro indexování odzadu 
+def add(a, b):
+    # vrátí součet dvou čísel a,b
+    c = a + b
+    return c
 
-l2[1] = 2           # přiřadí dvojku na druhé místo
+vysledek = add(1, 1)
 
-# ...a používat nad nimi vestavěné funkce
-print(min(l2))      # minimum
-print(max(l2))      # maximum
-print(len(l2))      # počet prvků
+# funkci můžeme argumenty předávat pozičně, ale i přes názvy parametrů
+vysledek = add(a=3, b=1)
 
-# ============
-# FOR CYKLUS
-# ============
+# parametry můžou mít tzv. defaultní (přednastavenou) hodnotu
+def add_verbose(a, b, verbose=False):
+    # vrátí součet dvou čísel a,b
+    c = a + b
 
-# for ELEM in ITERABLE:
-# v Pythonu se for cyklus chová jako "for each" - do proměnné ELEM postupně načítá prvky z ITERABLE
-# iterable je například list
-for elem in l2:
-    print(elem)
+    if verbose:
+        print(f"Sčítám {a} a {b}, vyšlo mi {c}")
 
-# indexy můžeme získat pomocí funkce enumerate()
-for i, elem in enumerate(l2):
-    print(i, elem)
-
-# cyklus můžeme předčasně ukončit pomocí příkazu break
-for elem in l2:
-    print(elem)
-    if elem >= 3:
-        break
-
-# a iteraci můžeme přeskočit pomocí příkazu continue
-for elem in l2:
-    if elem == 3:
-        continue
-    print(elem)
+    return vysledek
+    
+vysledek = add_verbose(a,b)
+vysledek = add_verbose(a,b, verbose=True)
