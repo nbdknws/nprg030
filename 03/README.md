@@ -1,7 +1,15 @@
 # Cvičení č. 3 – 16.10.2020
 
-## Algoritmizace
+## Informace
+- info o cvičení přesunuto na Github, na webu zůstal odkaz
+- zápočtové programy - promýšlejte, do 1.12. si se mnou domluvte téma, info na webu
+- pokud můžete, používejte Git pro verzování kódu (doufám, že během semestru stihneme tutorial, ale základ se dá naučit jednoduše)
 
+## Domácí úlohy
+- hinty: kontrolovat formát vstupu, kontrolovat výstupy pro krajní hodnoty
+- naopak validitu vstupních hodnot není potřeba kontrolovat, dokud to není explicitně řečeno v zadání
+
+## Algoritmizace
 ### Úlohy na cykly
 
 1) Kolikrát se provede vnitřní cyklus v závislosti na `n`? Jaká bude jeho asymptotická časová složitost vyjádřená pomocí `n`?
@@ -30,10 +38,16 @@ while n > 0:
 4) Kolikrát se provede vnitřní cyklus v závislosti na `n`? Jaká bude jeho asymptotická časová složitost vyjádřená pomocí `n`?
 ```python
 for i in range(n,1,-1):
-    j = i
+    j = n
     while j > 0:
         j //= 2
 ```
+
+#### [Spoiler alert] Řešení
+1) přesný vzorec: `n * (n+1) / 2`, asymptoticky n^2
+2) O(n^3 * sqrt(m))
+3) best-case Ω(1) - čísla nedělitelná třemi, worst-case O(log(n)) - mocniny trojky
+4) O(n log(n)) 
 
 ### Úlohy na asymptotickou složitost
 *viz slide 9 v [prezentaci z přednášky](2Numericke.pdf)*
@@ -43,3 +57,13 @@ Dokažte nebo vyvraťte:
 2. Pokud `f(n)=O(g(n))`, pak `2^f(n)=O(2^g(n))`
 3. Pokud `f(n)=O(g(n))`, pak `g(n)=Ω(f(n))`
 4. `f(n)=O(f(n)^2)`
+
+
+#### [Spoiler alert] Řešení
+1. obecně neplatí: protipříklad `f(n) = n`, `g(n) = n^2`
+2. obecně neplatí: protipříklad `f(n) = 2n`, `g(n) = n`
+3. platí vždy, `c2` v druhé rovnici můžeme zvolit jako `1/c1`
+4. obecně neplatí: protipříklad `f(n) = 1/n`
+
+## Programování
+- viz [kód](lab03.py)
