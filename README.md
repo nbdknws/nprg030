@@ -37,7 +37,7 @@ Domácí úlohy + aktivita| 45 bodů z 60 (+6) celkem
 
 Na každém cvičení (kromě posledního) můžete získat 0.5 bodu za **aktivní účast**. _Aktivní účast_ znamená, že se nejen připojíte na Zoom, ale zapojujete se do diskuzí, hlasování apod. (tzn. nestačí mít zapnutý Zoom na pozadí).  
 
-Celkem to znamená cca 0.5 \* 12 = 6 bodů za semestr. Tyto body se počítají do celkového počtu 75 bodů.
+Celkem to znamená cca 0.5 \* 12 = 6 bodů za semestr. Tyto body se počítají do celkového počtu 45 bodů.
 
 Součástí předmětu je dále i zkouška.  
  
@@ -60,10 +60,10 @@ Součástí předmětu je dále i zkouška.
 **Domácí úlohy** budou spočívat v odevzdání programu v Pythonu do [ReCodExu](https://recodex.mff.cuni.cz).  
 Úlohy budou zadávané každý v pátek na cvičeních a deadline bude vždy v neděli následující týden (tzn. za 9 dní).
 
-Na každém cvičení (kromě posledního) můžete získat 0.5 bodu za **aktivní účast**.   
-_Aktivní účast_ znamená, že se nejen připojíte na Zoom, ale zapojujete se do diskuzí, hlasování apod. (tzn. nestačí mít zapnutý Zoom na pozadí).  
-Celkem to znamená cca 0.5 \* 12 = 6 bodů za semestr.  
-Tyto body se počítají do celkového počtu 75 bodů.
+Na každém cvičení (kromě posledního) můžete získat 0.5 bodu za **aktivní účast**.  
+_Aktivní účast_ znamená, že se nejen připojíte na Zoom, ale zapojujete se do diskuzí, hlasování apod. (tzn. nestačí mít zapnutý Zoom na pozadí).
+
+Celkem to znamená cca 0.5 \* 12 = 6 bodů za semestr.  Tyto body se počítají do celkového počtu 75 bodů.
 
 **Zápočtový test** proběhne na posledním cvičení, podle aktuálního harmonogramu 8. ledna.  
 Obsahem bude naprogramování zadané úlohy (přibližně v rozsahu jedné domácí úlohy) během 75 minut.  
