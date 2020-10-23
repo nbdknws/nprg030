@@ -19,8 +19,90 @@ Najděte vstupy, pro které kód nefunguje, identifikujte chyby v implementaci a
 
 *Funkce `assert` se používá pro kontrolu podmínky, která musí být vždy splněna. Pokud je výraz uvnitř funkce `assert` vyhodnocen na False, funkce vrátí `AssertionError`. Toho se využívá např. pro automatické testování.*
 
+**[Spoiler alert] Řešení**
+- [Opravený Euklidův algoritmus](euclid_fixed.py)
+- [Opravené Eratosthenovo síto](eratosthenes_fixed.py)
+
 ### Třídění
 
 Doplňte do [šablony](quadratic_sorts_template.py) funkce `bubble_sort(l)`, `insertion_sort(l)` a `selection_sort(l)`. Vypisujte každou záměnu prvků v poli (např. "Vyměňuji 5 a 4"), částečně setříděné pole po každé iteraci, a vraťte kromě setříděného pole i celkový počet kroků vnitřního cyklu.
 
 [Odkaz na animace](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
+
+**[Spoiler alert] Řešení**
+- [Vypracované zadání](quadratic_sorts.py)
+
+## Rychlokurz na Git
+
+*nepovinné, není součástí předmětu*
+
+### Odkazy
+- Příručka: https://git-scm.com/docs
+- Podrobný tutorial (částečně i v češtině): https://git-scm.com/book/cs/v2
+- Práce se samotným Githubem: https://guides.github.com/activities/hello-world/
+- Cheatsheet: https://training.github.com/downloads/github-git-cheat-sheet/
+- Jak nastavit zkratky `git st` apod.: https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
+
+### Základní příkazy
+- založení nového projektu ve složce
+```
+git init
+```
+
+- přidání dosud nesledovaných souborů + změn v nich do staging area
+```
+git add SOUBOR1 SOUBOR2 (...)
+```
+
+- přidání změn ve všech sledovaných souborech do staging area
+```
+git add -u
+```
+
+- kontrola stavu repozitáře (informace o (ne)commitnutých změnách, (ne)sledovaných souborech apod.)
+```
+git status
+```
+
+- výpis změn ve staging area
+```
+git diff --staged
+```
+
+- výpis změn ve sledovaných souborech nepřidaných do staging area
+```
+git diff
+```
+
+- commit změn s popisem
+```
+git commit -m "Zde stručně a výstižně popisuji, co jsem v kódu změnil"
+```
+
+- zobrazení historie commitů
+```
+git log
+```
+
+- nastavení propojení se vzdáleným repozitářem např. na Githubu (stačí provést jednou, Github příkaz napoví)
+```
+git remote add origin <adresa_vzdáleného_repozitáře>
+```
+
+- odeslání změn do vzdáleného repozitáře
+```
+git push
+```
+
+- poprvé je potřeba určit, které větve si navzájem odpovídají (Git napoví), od té chvíle už stačí pouze `git push`
+```
+git push --set-upstream origin main
+```
+
+- stáhnutí změn ze vzdáleného repozitáře
+```
+git pull
+```
+
+## Programování
+- viz [kód](lab04.py)
