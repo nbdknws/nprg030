@@ -22,3 +22,5 @@ Najděte vstupy, pro které kód nefunguje, identifikujte chyby v implementaci a
 ### Třídění
 
 Doplňte do [šablony](quadratic_sorts_template.py) funkce `bubble_sort(l)`, `insertion_sort(l)` a `selection_sort(l)`. Vypisujte každou záměnu prvků v poli (např. "Vyměňuji 5 a 4"), částečně setříděné pole po každé iteraci, a vraťte kromě setříděného pole i celkový počet kroků vnitřního cyklu.
+
+[Odkaz na animace](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
