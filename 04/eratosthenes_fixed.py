@@ -18,4 +18,4 @@ def eratosthenes(n):
 assert(eratosthenes(1) == [])
 assert(eratosthenes(4) == [2, 3])
 assert(eratosthenes(15) == [2, 3, 5, 7, 11, 13])
-print(eratosthenes(100000)[-1] == 99991)
+assert(eratosthenes(100000)[-1] == 99991)

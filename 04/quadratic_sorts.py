@@ -38,7 +38,7 @@ def insertion_sort(l):
 def selection_sort(l):
     steps = 0
 
-    for i in range(len(l)): 
+    for i in range(len(l)):
         min_idx = i
 
         for j in range(i+1, len(l)): 
