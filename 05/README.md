@@ -8,7 +8,7 @@
 
 Příklad min-haldy:
 
-![min_heap_ex](https://www.algoritmy.net/image/id/39710)
+![min_heap_ex](min_heap_ex.png)
 
 Pseudokód pro operace na min-haldě. Haldu máme uloženou v poli A, indexujeme od nuly.
 
