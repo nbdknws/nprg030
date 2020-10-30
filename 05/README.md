@@ -10,9 +10,10 @@ Příklad min-haldy:
 
 ![min_heap_ex](min_heap_ex.png)
 
-Pseudokód pro operace na min-haldě. Haldu máme uloženou v poli A, indexujeme od nuly.
+Uložení haldy z obrázku: `A = [1, 3, 2, 4, 5, 9, 7, 6, 8]`
 
-Uložení haldy z obrázku: `[1, 3, 2, 4, 5, 9, 7, 6, 8]`
+Zapište pseudokódem operace na min-haldě. Haldu máme uloženou v poli A, indexujeme od nuly.
+
 
 *Pseudokód nemá pevně danou syntaxi; ze zápisu by ale mělo být jasné, jak kód přepsat do konkrétního programovacího jazyka.*
 
