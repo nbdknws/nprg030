@@ -31,6 +31,8 @@
     * `O(n^2)`: vstup: seznam lidí s parametry; výstup: dvojice lidí s kompatibilními parametry  
     * `O(2^n)`: vstup: počet znaků hesla; výstup: uhádnuté heslo (brute-force algoritmus)
     * `O(n!)`: vstup: seznam čísel; výstup: všechny permutace seznamu
+
+![big-o](big-o-cheatsheet.png)
         
 ## Programování
 *   povídání o Pythonu - název, rozdíl verze 2 vs. verze 3
