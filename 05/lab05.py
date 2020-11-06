@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+
+"""
+Kód ke cvičení #5 z NPRG030.
+Kód nemá fungovat jako celek a nemusí být kompletní.
+Jednotlivé části kódu byly postupně vysvětleny na cvičení.
+"""
 
 # ===================
 # množiny
