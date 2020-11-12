@@ -12,7 +12,7 @@
   - O(n) přidání / smazání prvku na začátek seznamu (začátek seznamu v paměti je pevně daný, musíme tedy posunout všechny prvky o pozici dál)
   - uloženo v jednom souvislém kuse paměti
 - spojový seznam
-  - O(n) přístup
+  - O(n) přístup k prvku
   - O(1) smazání / přidání prvku kdekoliv (stačí přepojit ukazatele)
   - každý prvek je naalokovaný v paměti zvlášť
   - využití např. na implementaci fronty
