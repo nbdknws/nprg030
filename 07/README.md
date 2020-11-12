@@ -2,18 +2,20 @@
 
 ## Algoritmizace
 
-### Zásobník a fronta
-- **abstraktní datové struktury**
+### Abstraktní datové struktury
   - definujeme operace, popisujeme chování
   - neřešíme konkrétní implementaci
-- zásobník
+
+**Zásobník**
   - operace `push(el)` a `pop()`
   - princip LIFO: last in - first out
-- fronta
+
+**Fronta**
   - operace `enqueue(el)` a `dequeue()`
   - princip FIFO: first in - first out
-- prioritní fronta
-  - operace `insert(el,priority)` a `getHighestPriorityElement()`
+
+**Prioritní fronta**
+  - operace `insert(el,priority)` a `getHighestPriorityElem()`
   - vrací vždy prvek s nejvyšší prioritou
   
 ![stack-queue](stack-queue.png)
@@ -21,14 +23,14 @@
 
 ### Aritmetické výrazy
 - infixová notace
-  - operátor mezi operandy
+  - operátor se nachází mezi operandy
   - záleží na prioritě operátorů / uzávorkování
 - prefixová (polská) notace
-  - operátor před operandy
-  - *jednoznačná* (nepotřebuje uzávorkování)
+  - operátor se nachází před operandy
+  - jednoznačná (nepotřebuje uzávorkování)
 - postfixová (reverzní polská) notace
-  - operátor po operandech
-  - *jednoznačná* (nepotřebuje uzávorkování)
+  - operátor se nachází po operandech
+  - jednoznačná (nepotřebuje uzávorkování)
 
 #### Příklady
   - infix:  `A * B + C`
@@ -54,9 +56,6 @@ Máte k dispozici zásobník `stack` s funkcemi `push(el)`, `pop()` a `is_empty(
 2. Převeďte ručně výraz `(7 + 3) * (5 - 2)` do prefixové notace.
 3. Ukažte jednotlivé kroky Vašeho algoritmu z bodu 1 při vyhodnocení výrazu `(7 + 3) * (5 - 2)` v **prefixové notaci** z bodu 2.
 
-**Prefix vs. postfix**
-1. Která notace (prefix vs. postfix) je výhodnější pro průběžné vyhodnocování výrazu během jeho zadávání?
-2. 
 
 ### Průchod stromem po hladinách
 
@@ -66,10 +65,10 @@ Máte k dispozici zásobník `stack` s funkcemi `push(el)`, `pop()` a `is_empty(
 
 Strom obsahuje prvky typu `Node`, každý prvek obsahuje hodnotu `value`. Ke stromu můžete přistupovat přes jeho kořen `root` (v příkladu prvek s hodnotou `1`), k potomkům každého prvku můžete přistupovat přes atribut `node.children`.
 
-Máte k dispozici frontu `queue` s funkcemi `enqueue(el)`, `dequeue()` a `is_empty()`. (*A rekurzi ještě neznáte*)
+Máte k dispozici frontu `queue` s funkcemi `enqueue(el)`, `dequeue()` a `is_empty()`. 
 
 1. Zapište (pseudo)kód, který vypíše prvky ve stromu po hladinách (tedy v příkladu v pořadí `1 2 3 4 5 6 7 8 9`).
 2. Ukažte jednotlivé kroky Vašeho algoritmu z bodu 1 na stromu z příkladu.
 
-## Programování
-- viz [kód](lab07.py)
+<!-- ## Programování
+- viz [kód](lab07.py) -->
