@@ -56,6 +56,42 @@ Máte k dispozici zásobník `stack` s funkcemi `push(el)`, `pop()` a `is_empty(
 2. Převeďte ručně výraz `(7 + 3) * (5 - 2)` do prefixové notace.
 3. Ukažte jednotlivé kroky Vašeho algoritmu z bodu 1 při vyhodnocení výrazu `(7 + 3) * (5 - 2)` v **prefixové notaci** z bodu 2.
 
+**[Spoiler] Řešení**
+
+- infix: `(7 + 3) * (5 - 2)`
+- prefix: `* + 7 3 - 5 2`
+- postfix: `7 3 + 5 2 - *`
+
+```python
+def eval_postfix(expr):
+    stack = Stack()
+
+    for symb in expr:
+        if is_operand(symb):
+            stack.push(symb)
+        else:
+            s1 = stack.pop()
+            s2 = stack.pop()
+            res = symb(s2, s1)
+            stack.push(res)
+
+    return stack.pop()
+
+
+def eval_prefix(expr):
+    stack = Stack()
+    expr = reversed(expr)
+
+    for symb in expr:
+        if is_operand(symb):
+            stack.push(symb)
+        else:
+            s1 = stack.pop()
+            s2 = stack.pop()
+            res = symb(s1, s2)
+            stack.push(res)
+```
+
 
 ### Průchod stromem po hladinách
 
@@ -70,5 +106,20 @@ Máte k dispozici frontu `queue` s funkcemi `enqueue(el)`, `dequeue()` a `is_emp
 1. Zapište (pseudo)kód, který vypíše prvky ve stromu po hladinách (tedy v příkladu v pořadí `1 2 3 4 5 6 7 8 9`).
 2. Ukažte jednotlivé kroky Vašeho algoritmu z bodu 1 na stromu z příkladu.
 
-<!-- ## Programování
-- viz [kód](lab07.py) -->
+
+**[Spoiler] Řešení**
+```python
+def level_order_traversal(root):
+    queue = Queue()
+    queue.enqueue(root)
+
+    while not queue.is_empty():
+        node = queue.dequeue()
+        print(node.value)
+
+        for ch in node.children:
+            queue.enqueue(ch)
+```
+
+## Programování
+- viz [kód](lab07.py)
