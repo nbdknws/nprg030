@@ -80,7 +80,7 @@ def eval_postfix(expr):
 
 def eval_prefix(expr):
     stack = Stack()
-    expr = reversed(expr)
+    expr.reverse()
 
     for symb in expr:
         if is_operand(symb):
@@ -120,6 +120,8 @@ def level_order_traversal(root):
         for ch in node.children:
             queue.enqueue(ch)
 ```
+
+- *bonus: vizualizace hledání cest -* https://clementmihailescu.github.io/Pathfinding-Visualizer/
 
 ## Programování
 - viz [kód](lab07.py)
