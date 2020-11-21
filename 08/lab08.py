@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Kód ke cvičení #7 z NPRG030.
+Kód ke cvičení #8 z NPRG030.
 Kód nemá fungovat jako celek a nemusí být kompletní.
 Jednotlivé části kódu byly postupně vysvětleny na cvičení.
 """
@@ -31,7 +31,7 @@ else:
 # ==================
 # pickle
 # ==================
-# modul pro serializaci - ukládání datových struktur do souborů
+# modul pro serializaci dat: ukládání datových struktur do souborů
 import pickle
 
 game_state = [1, 2, 3, "a", "b", {"c": 4}]
@@ -40,5 +40,6 @@ game_state = [1, 2, 3, "a", "b", {"c": 4}]
 with open("game.bin", "wb") as f:
     pickle.dump(game_state, f)
 
+# data si můžeme kdykoliv ze souboru znovu načíst
 with open("game.bin", "rb") as f:
     loaded_game_state = pickle.load(f)
