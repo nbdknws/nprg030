@@ -42,6 +42,8 @@
 
 Dále viz [kód](lab08.py).
 
+[Link na Kahoot kvíz](https://kahoot.it/challenge/?quiz-id=1a2f42a2-5f7e-4c42-ab6e-bd418eb74319&single-player=true)
+
 ## Algoritmizace
 
 ### Rekurze
