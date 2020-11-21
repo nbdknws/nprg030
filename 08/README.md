@@ -1,4 +1,4 @@
-# Cvičení č. 8 – 21.11.2020
+# Cvičení č. 8 – 20.11.2020
 
 ## Programování
 ### Textový vs. binární soubor
