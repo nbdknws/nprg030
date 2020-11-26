@@ -3,6 +3,29 @@
 ## Algoritmizace
 
 [Hanojské věže](http://towersofhanoi.info/Animate.aspx)
+- originální zadání: 3 tyče (A,B,C), 64 disků různých velikostí
+- na začátku jsou všechny disky na tyči A 
+- v každém kroku lze přesunout jeden disk
+- větší disk nemůže ležet na menším 
+- **úkol:** přemístit všechny disky z tyče A na tyč B (C je pomocná tyč)
+
+**Rekurzivní řešení**
+- přesuň n-1 disků z tyče A (původní) na tyč C (pomocnou) → vyřeš rekurzivně menší problém
+- přesuň n-tý (největší) disk z tyče A na tyč B (cílovou) → jediný krok
+- přesuň n-1 disků z tyče C (pomocné) na tyč B (cílovou) → vyřeš rekurzivně menší problém
+
+```python
+def hanoi_towers(n, src, dst, aux): 
+    if n==1: 
+        print("Přesuň disk velikosti", n, "z tyče", src, "na tyč", dst)
+        return
+
+    hanoi_towers(n-1, src, aux, dst) 
+    print("Přesuň disk velikosti", n, "z tyče", src, "na tyč", dst)
+    hanoi_towers(n-1, aux, dst, src) 
+
+hanoi_towers(n, "A", "B", "C")
+```
 
 ## Programování
 
@@ -57,7 +80,7 @@ class Trumpet(Instrument):
 
 class Guitar(Instrument):
     def __init__(self, price, tuning):
-        # předefinovali jsme __init__, ale přiřazení price chceme nechat na nadřazené třídě
+        # předefinovali jsme __init__, ale přiřazení atributu `price` chceme nechat na nadřazené třídě
         super().__init__(price=price)
         self.tuning = tuning
 
@@ -73,6 +96,7 @@ class ElectricGuitar(Guitar):
 
 a = ElectricGuitar(price=5000, tuning="EHGDAE")
 print(a.get_sound())
+print(a.get_tuning())
 ```
 
 ### Úkoly
@@ -84,8 +108,8 @@ print(a.get_sound())
 6. Zařiďte, aby operátor `in` použitý na dvou obdélnících vrátil `True` nebo `False` podle toho, jestli je jeden obdélník podmnožinou druhého.
 7. Zařiďte, aby operátor `&` použitý na dvou obdélnících vrátil nový obdélník, který je průnikem obou obdélníků (pokrývá vaše řešení všechny případy?)
 8. Vytvořte třídu `Square`, která místo šířky a výšky bere pouze délku hrany. Třída bude umět stejné operace jako třída `Rect`.
-9. Vytvořte třídu `FilledRect`, která při vykreslování vnitřní plochu obdélníku zaplní pomocí znaku (např. "x").
-10. Vytvořte třídu `RoundedRect` pro obdélník se zakulacenými rohy (stačí vynechat krajní pomlčky).
+9. Vytvořte třídu `FilledRect`, která při vykreslování vnitřní plochu obdélníku zaplní pomocí znaku (např. "x").  Třída bude umět stejné operace jako třída `Rect`.
+10. Vytvořte třídu `RoundedRect` pro obdélník se zakulacenými rohy (stačí vynechat krajní pomlčky). Třída bude umět stejné operace jako třída `Rect`.
 11. Vytvořte třídu `FilledRoundedRect`, která kombinuje vlastnosti předchozích dvou tříd (zamyslete se, jak na to co nejjednodušeji).
 12. Nadefinujte funkci `draw(shapes)`, která bere jako argument seznam tvarů a vykreslí je všechny zároveň (přes sebe) do terminálu (nejprve pořádně promyslete). Vykreslete si pár tvarů pro radost a dejte vědět, že máte hotovo.
 
