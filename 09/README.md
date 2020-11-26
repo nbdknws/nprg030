@@ -2,7 +2,12 @@
 
 ## Algoritmizace
 
-[Hanojské věže](http://towersofhanoi.info/Animate.aspx)
+### Hanojské věže
+
+![hanoi](hanoi.png)
+
+http://towersofhanoi.info/Animate.aspx
+
 - originální zadání: 3 tyče (A,B,C), 64 disků různých velikostí
 - na začátku jsou všechny disky na tyči A 
 - v každém kroku lze přesunout jeden disk
