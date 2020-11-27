@@ -32,6 +32,23 @@ def hanoi_towers(n, src, dst, aux):
 hanoi_towers(n, "A", "B", "C")
 ```
 
+### Pokladna
+Vstupenka stojí 100 Kč. U vstupu čeká S lidí, co chtějí zaplatit stokorunou, a D lidí, co chtějí zaplatit dvousetkorunou. Na pokladně není na začátku žádná hotovost. Vypište všechny pořadí, ve kterých mohou lidé přicházet k pokladně, aby bylo možné vracet peníze zpět.
+
+```python
+def pokladna(s,d,na_vraceni,lidi):
+    if s==0 and d==0:
+        print(lidi)
+
+    if s > 0:
+        pokladna(s-1,d,na_vraceni+1,lidi+["S"])
+
+    if d > 0 and na_vraceni > 0:
+        pokladna(s,d-1,na_vraceni-1,lidi+["D"])
+
+pokladna(S,D,na_vraceni=0,lidi=[])
+```
+
 ## Programování
 
 ### Magic metody
@@ -133,6 +150,7 @@ print(Rect(x=0, y=0, w=5, h=4))
 -------
 
 print(Rect(x=2, y=1, w=2, h=3))
+
   ----
   |  |
   |  |
@@ -144,6 +162,12 @@ print(Rect(x=2, y=1, w=2, h=3).perimeter())
 
 print(Rect(x=2, y=1, w=2, h=3).area())
 6
+
+print(Rect(x=0, y=0, w=5, h=8) in Rect(x=3, y=2, w=8, h=3))
+False
+
+print(Rect(x=3, y=2, w=2, h=2) in Rect(x=0, y=0, w=8, h=5))
+True
 
 print(Rect(x=0, y=0, w=5, h=8) & Rect(x=3, y=2, w=8, h=3))
 
