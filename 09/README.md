@@ -119,4 +119,80 @@ print(a.get_tuning())
 12. Nadefinujte funkci `draw(shapes)`, která bere jako argument seznam tvarů a vykreslí je všechny zároveň (přes sebe) do terminálu (nejprve pořádně promyslete). Vykreslete si pár tvarů pro radost a dejte vědět, že máte hotovo.
 
 
-**Bonus:** Vytvořte třídy `Triangle` (trojúhelník se zadanou výškou) a `Circle` (kruh se zadaným průměrem). Nadefinujte vykreslování do terminálu a další metody. 
+**Bonus:** Vytvořte třídy `Triangle` (trojúhelník se zadanou výškou) a `Circle` (kruh se zadaným průměrem). Nadefinujte vykreslování do terminálu a další metody.
+
+
+**Ukázkové výstupy:**
+```
+print(Rect(x=0, y=0, w=5, h=4))
+-------
+|     |
+|     |
+|     |
+|     |
+-------
+
+print(Rect(x=2, y=1, w=2, h=3))
+  ----
+  |  |
+  |  |
+  |  |
+  ----
+
+print(Rect(x=2, y=1, w=2, h=3).perimeter())
+10
+
+print(Rect(x=2, y=1, w=2, h=3).area())
+6
+
+print(Rect(x=0, y=0, w=5, h=8) & Rect(x=3, y=2, w=8, h=3))
+
+
+   ----
+   |  |
+   |  |
+   |  |
+   ----
+
+print(Square(x=0, y=0, a=3))
+-----
+|   |
+|   |
+|   |
+-----
+
+print(FilledRect(x=1, y=1, w=4, h=3))
+ ------
+ |xxxx|
+ |xxxx|
+ |xxxx|
+ ------
+
+print(RoundedRect(x=0, y=0, w=5, h=2))
+ -----
+|     |
+|     |
+ -----
+
+print(FilledRoundedRect(x=0, y=0, w=7, h=2))
+ -------
+|xxxxxxx|
+|xxxxxxx|
+ -------
+
+draw([
+    Rect(x=0, y=0, h=6, w=6),
+    RoundedRect(x=3, y=1, h=3, w=18),
+    FilledRoundedRect(x=6, y=3, h=5, w=11),
+])
+--------               
+|   ------------------ 
+|  |   |              |
+|  |   -----------    |
+|  |  |xxxxxxxxxxx|   |
+|   --|xxxxxxxxxxx|--- 
+|     |xxxxxxxxxxx|    
+------|xxxxxxxxxxx|    
+      |xxxxxxxxxxx|    
+       -----------   
+```
