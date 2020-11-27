@@ -186,6 +186,7 @@ print(Square(x=0, y=0, a=3))
 -----
 
 print(FilledRect(x=1, y=1, w=4, h=3))
+
  ------
  |xxxx|
  |xxxx|
@@ -198,11 +199,11 @@ print(RoundedRect(x=0, y=0, w=5, h=2))
 |     |
  -----
 
-print(FilledRoundedRect(x=0, y=0, w=7, h=2))
- -------
-|xxxxxxx|
-|xxxxxxx|
- -------
+print(FilledRoundedRect(x=1, y=0, w=7, h=2))
+  -------
+ |xxxxxxx|
+ |xxxxxxx|
+  -------
 
 draw([
     Rect(x=0, y=0, h=6, w=6),
