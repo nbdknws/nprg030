@@ -59,7 +59,7 @@ def find_path(fields):
     # nejkratší cesty ze startu (0,0) do cíle (N-1, N-1)
     # =======================================================================================
     
-    
+        
 
     return path_coordinates
 
@@ -95,7 +95,7 @@ def draw_path(fields, coordinates, numerical=False):
         if not is_free(x, y, fields):
             raise ValueError(f"Chyba: souřadnice ({x},{y}) se nachází ve zdi nebo mimo pole.")
 
-        fields[x][y] = str(i) if numerical else "."
+        fields[x][y] = str(i)[-1] if numerical else "."
 
     for line in fields:
         for field in line:
@@ -208,4 +208,4 @@ for i, maze in enumerate(inputs):
     input("Stiskněte Enter pro nalezení cesty v bludišti nebo Ctrl+C pro ukončení programu.\n")
     fields = parse_maze(maze)
     coordinates = find_path(fields)
-    draw_path(fields, coordinates)
+    draw_path(fields, coordinates, numerical=True)
