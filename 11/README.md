@@ -7,6 +7,7 @@
 
 - minimalistický Python projekt
 - ukázka rozdělení do tříd a souborů, způsob návrhu programu
+- (bude dokončeno příště)
 
 ### Struktura programu
 
@@ -43,7 +44,7 @@
   - v tom případě je proměnná `__name__` nastavena na `"__main__"`
   - pokud je soubor importovaný jako modul, proměnná `__name__` je nastavena na jméno modulu a kód se neprovede
 
-Oficiální style guide pro Python: [PEP8](https://www.python.org/dev/peps/pep-0008/#imports).
+Oficiální style guide pro Python: [PEP8](https://www.python.org/dev/peps/pep-0008/).
 
 
 ## Algoritmizace
